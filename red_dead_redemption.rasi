@@ -1,0 +1,103 @@
+
+
+* {
+  /* Default background color */
+  background-color: transparent;
+  text-color:       white;
+}
+
+
+window {
+  location: center;
+  anchor: center;
+  width:  400px; 
+  height: 550px;
+  transparency: "screenshot";
+  padding: 10px;
+  border: 0px;
+  border-radius: 1px;
+  background-color: #000000cc;
+  color: white;
+  children: [mainbox];
+}
+
+configuration {
+    icon-theme: "Papirus";
+}
+
+mainbox {
+  spacing: 0px;
+  children: [inputbar, listview, message];
+}
+
+element {
+  background: inherit;
+  children: [ element-icon, element-text ];
+}
+element,element-text,element-icon, button {
+    cursor: pointer;
+}
+
+inputbar {
+
+    color: white;
+    padding: 10px 0px 0px 0px;
+    background-color: inherit;
+    border: 2px 0px 0px 0px;
+    //border-radius:  15px 15px 0px 0px;
+    border-color: white;
+    font: "Source Code Pro 18";
+}
+
+
+entry {
+    padding: 0px 0px 0px 3px;
+    text-color: yellow;
+}
+
+listview, inputbar, message {
+  padding: 0.5em;  
+  background-color: inherit;
+
+  columns: 4;
+  lines:   4;
+}
+
+listview {
+  spacing: 10px;
+  border:       2px 0px 2px 0px;
+  border-color: white;
+}
+
+element {
+    border:  0;
+    padding:      10px;
+    background-color: #444444aa;
+    font:         "Mono 8";
+    orientation: vertical;
+    fixed-height: true;
+    fixed-width: true;
+}
+
+element-icon {
+  size: 3em;
+}
+
+element  selected  {
+  border-color: yellow;
+  border:       2px;
+  text-color: yellow;
+}
+
+element selected active {
+  background-color: #ffff0022;
+  border-color: yellow;
+  border: 2px;
+  text-color: yellow;
+}
+
+element-text, element-icon {
+  font:             inherit; 
+  horizontal-align: 0.5;
+}
+
